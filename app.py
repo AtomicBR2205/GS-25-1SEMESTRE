@@ -33,7 +33,3 @@ if __name__ == "__main__":
         print("Nenhum risco de inundação detectado. Você está seguro.")
     
     
-    print("Sistema de monitoramento de inundação iniciado com sucesso.")
-    print("Dados dos sensores processados com sucesso.")
-
-    
