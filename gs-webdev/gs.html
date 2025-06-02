@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto Web Vanilla</title>
+  <link rel="stylesheet" href="gs.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"></div>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#slideshow">Slideshow</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#form">Formulário</a></li>
+      </ul>
+      <div class="theme-icons">
+        <span class="theme-btn" data-theme="light">🌞</span>
+        <span class="theme-btn" data-theme="dark">🌙</span>
+        <span class="theme-btn" data-theme="neutral">🎨</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Slideshow -->
+    <section id="slideshow" class="slideshow">
+      <div class="slide-container">
+        <img src="enchente 06.05.jpg" alt="Enchente 1" />
+        <div class="slide-text">🛠️ 1. Planejamento Urbano Inteligente e Inclusivo
+A resolução de tragédias recorrentes como enchentes e deslizamentos começa com políticas públicas de urbanização responsável. É essencial revisar o modelo de ocupação do solo, impedindo a construção em áreas de risco e promovendo reassentamento seguro para populações vulneráveis.
+Além disso, investimentos em infraestrutura básica de drenagem urbana são urgentes. Com mais de 55% das áreas de risco sem esse serviço, é necessário priorizar obras que incluam bueiros inteligentes, canais de escoamento e zonas de amortecimento de água.
+Municípios devem integrar zonas verdes permeáveis em seus planos diretores, contribuindo para a absorção da água da chuva e reduzindo o risco de alagamentos.
+
+</div>
+      </div>
+
+      <div class="slide-container" style="display: none;">
+        <img src="tecnologia-e-seguranca-3-1-1024x683.jpg" alt="Enchente 2" />
+        <div class="slide-text">📡 2. Tecnologia e Monitoramento em Tempo Real
+O Brasil precisa transformar a maneira como lida com desastres naturais através do uso de tecnologia de ponta. Sistemas de alerta precoce — como os utilizados com sucesso no Japão e na Holanda — podem ser implantados em larga escala no país, conectando redes de sensores em áreas críticas com sirenes, aplicativos e mensagens SMS para evacuação imediata.
+O fortalecimento de instituições como o CEMADEN é estratégico: ampliar seu orçamento, recursos humanos e integração com defesas civis locais pode salvar milhares de vidas.
+Além disso, plataformas digitais com dados abertos e atualizados sobre áreas de risco, histórico de enchentes e rotas de fuga devem ser desenvolvidas e popularizadas entre a população.
+
+</div>
+      </div>
+
+      <div class="slide-container" style="display: none;">
+        <img src="fafd7e10-1433-4182-b560-4d577e3276c8.webp" alt="Enchente 3" />
+        <div class="slide-text">💼 3. Educação Comunitária e Participação Cidadã
+A tecnologia e a infraestrutura são fundamentais, mas a prevenção também passa pela educação e mobilização da sociedade. Programas de formação comunitária em gestão de riscos podem preparar moradores de áreas vulneráveis para agirem de forma rápida e organizada em momentos de crise.
+Escolas, centros comunitários e postos de saúde devem funcionar como hubs de conscientização, ensinando desde crianças a identificar sinais de risco até adultos a montarem kits de emergência.
+Além disso, governos podem promover consultas públicas e plataformas participativas para que a população contribua com dados locais, ajudando no mapeamento de risco e cobrando ações do poder público com base em evidências.</div>
+      </div>
+
+      <div class="slide-controls">
+        <button onclick="changeSlide(-1)">⟨ Anterior</button>
+        <button onclick="changeSlide(1)">Próximo ⟩</button>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="quiz">
+      <h2>Quiz Interativo</h2>
+      <div id="quiz-container"></div>
+      <button id="submit-quiz">Enviar</button>
+      <p id="quiz-result"></p>
+    </section>
+
+    <!-- Formulário -->
+    <section id="form" class="form">
+      <h2>Formulário</h2>
+      <form id="contact-form">
+        <input type="text" id="nome" placeholder="Nome*" required />
+        <input type="email" id="email" placeholder="Email*" required />
+        <textarea id="mensagem" placeholder="Mensagem*" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide-container");
+
+    function changeSlide(direction) {
+      slides[currentSlide].style.display = "none";
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].style.display = "block";
+    }
+    const quizData = [
+      {
+        question: "1. Qual é a principal causa das enchentes urbanas?",
+        options: [
+          "Desmatamento e ocupação irregular do solo",
+          "Temperaturas elevadas",
+          "Poluição do ar",
+          "Uso excessivo de energia"
+        ],
+        answer: 0
+      },
+      {
+        question: "2. Qual tecnologia ajuda a prever desastres naturais?",
+        options: [
+          "Sistemas de alerta precoce",
+          "Impressoras 3D",
+          "Redes sociais",
+          "Energia solar"
+        ],
+        answer: 0
+      },
+      {
+        question: "3. Qual medida urbana ajuda a evitar enchentes?",
+        options: [
+          "Construção em áreas de risco",
+          "Zonas verdes permeáveis",
+          "Aumento da impermeabilização do solo",
+          "Redução de bueiros"
+        ],
+        answer: 1
+      },
+      {
+        question: "4. O que é essencial para a educação comunitária em gestão de riscos?",
+        options: [
+          "Ignorar os sinais de risco",
+          "Programas de formação e conscientização",
+          "Deixar o governo resolver tudo",
+          "Construir mais edifícios"
+        ],
+        answer: 1
+      },
+      {
+        question: "5. Qual é o órgão brasileiro responsável pelo monitoramento de desastres naturais?",
+        options: [
+          "INPE",
+          "CEMADEN",
+          "IBGE",
+          "ANVISA"
+        ],
+        answer: 1
+      },
+      {
+        question: "6. O que deve ser priorizado para evitar desastres nas cidades?",
+        options: [
+          "Infraestrutura de drenagem urbana",
+          "Aumento da poluição",
+          "Redução das zonas verdes",
+          "Desmatamento"
+        ],
+        answer: 0
+      },
+      {
+        question: "7. Qual é o impacto econômico anual estimado dos desastres naturais no Brasil?",
+        options: [
+          "R$ 1 bilhão",
+          "R$ 8 bilhões",
+          "R$ 50 bilhões",
+          "R$ 100 milhões"
+        ],
+        answer: 1
+      },
+      {
+        question: "8. Como a população pode ajudar na prevenção?",
+        options: [
+          "Participando de consultas públicas e mapeamento de risco",
+          "Ignorando alertas",
+          "Construindo em áreas de risco",
+          "Desmatando áreas urbanas"
+        ],
+        answer: 0
+      },
+      {
+        question: "9. Qual país é referência em sistemas de alerta precoce para desastres?",
+        options: [
+          "Japão",
+          "Brasil",
+          "Argentina",
+          "Rússia"
+        ],
+        answer: 0
+      },
+      {
+        question: "10. O que é importante incluir em planos diretores municipais?",
+        options: [
+          "Zonas verdes permeáveis",
+          "Construção em áreas de risco",
+          "Redução da infraestrutura",
+          "Cortes em investimentos públicos"
+        ],
+        answer: 0
+      }
+    ];
+
+    function buildQuiz() {
+      const quizContainer = document.getElementById("quiz-container");
+      quizContainer.innerHTML = "";
+
+      quizData.forEach((q, index) => {
+        const questionDiv = document.createElement("div");
+        questionDiv.classList.add("question-block");
+
+        const questionTitle = document.createElement("p");
+        questionTitle.classList.add("question");
+        questionTitle.textContent = q.question;
+        questionDiv.appendChild(questionTitle);
+
+        q.options.forEach((option, i) => {
+          const label = document.createElement("label");
+          label.classList.add("option-label");
+
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = `question${index}`;
+          input.value = i;
+          input.id = `q${index}option${i}`;
+
+          const span = document.createElement("span");
+          span.textContent = option;
+
+          label.appendChild(input);
+          label.appendChild(span);
+          questionDiv.appendChild(label);
+        });
+
+        quizContainer.appendChild(questionDiv);
+      });
+    }
+
+    function showResults() {
+      let score = 0;
+      quizData.forEach((q, index) => {
+        const selected = document.querySelector(`input[name=question${index}]:checked`);
+        if (selected && parseInt(selected.value) === q.answer) {
+          score++;
+        }
+      });
+      const result = document.getElementById("quiz-result");
+      result.textContent = `Você acertou ${score} de ${quizData.length} perguntas!`;
+    }
+
+    document.getElementById("submit-quiz").addEventListener("click", showResults);
+
+    buildQuiz();
+  </script>
+</body>
+</html>
