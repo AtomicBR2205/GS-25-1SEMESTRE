@@ -48,7 +48,7 @@ a{
     cursor: pointer;
 }
 
-header div{
+header div, #menu div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -526,4 +526,9 @@ background-color: rgb(0, 0, 0);
     font-family: Lato;
     color: white;
     border-radius: 15px;
+}
+
+#menu div{
+    font-family: Oswald;
+    margin-bottom: 3vw;
 }
