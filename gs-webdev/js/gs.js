@@ -168,3 +168,69 @@ function abrirMenu() {
     menu.style.left = "80%";
   }
 }
+
+const temas = {
+  claro: {
+    "--cor-primaria": "rgb(72, 72, 243)",
+    "--cor-primaria-escura": "rgb(9, 9, 59)",
+    "--cor-branco": "#fff",
+    "--cor-preto": "#000",
+    "--cor-cinza-escuro": "rgb(94, 94, 94)",
+    "--cor-cinza-medio": "rgb(223, 223, 223)",
+    "--cor-cinza-claro": "rgb(233, 233, 233)",
+    "--cor-cinza-footer": "rgb(185, 185, 185)",
+    "--cor-cinza-paragrafo": "rgb(59, 59, 59)",
+    "--cor-footer-h3": "rgb(240, 240, 240)",
+    "--cor-footer-h4": "rgb(240, 240, 240)",
+    "--cor-input-bg": "#222"
+  },
+  escuro: {
+    "--cor-primaria": "rgb(180, 180, 255)",
+    "--cor-primaria-escura": "rgb(220, 220, 255)",
+    "--cor-branco": "#111",
+    "--cor-preto": "#fff",
+    "--cor-cinza-escuro": "rgb(200, 200, 200)",
+    "--cor-cinza-medio": "rgb(40, 40, 40)",
+    "--cor-cinza-claro": "rgb(30, 30, 30)",
+    "--cor-cinza-footer": "rgb(70, 70, 70)",
+    "--cor-cinza-paragrafo": "rgb(220, 220, 220)",
+    "--cor-footer-h3": "rgb(30, 30, 30)",
+    "--cor-footer-h4": "rgb(30, 30, 30)",
+    "--cor-input-bg": "#eee"
+  },
+  reverso: {
+    "--cor-primaria": "rgb(243, 72, 72)",
+    "--cor-primaria-escura": "rgb(59, 9, 9)",
+    "--cor-branco": "#000",
+    "--cor-preto": "#fff",
+    "--cor-cinza-escuro": "rgb(223, 223, 223)",
+    "--cor-cinza-medio": "rgb(94, 94, 94)",
+    "--cor-cinza-claro": "rgb(59, 59, 59)",
+    "--cor-cinza-footer": "rgb(59, 59, 59)",
+    "--cor-cinza-paragrafo": "rgb(185, 185, 185)",
+    "--cor-footer-h3": "rgb(30, 30, 30)",
+    "--cor-footer-h4": "rgb(30, 30, 30)",
+    "--cor-input-bg": "#fff"
+  }
+};
+
+let temaAtual = "claro";
+
+function alternarTema() {
+  if (temaAtual === "claro") {
+    aplicarTema("escuro");
+  } else if (temaAtual === "escuro") {
+    aplicarTema("reverso");
+  } else {
+    aplicarTema("claro");
+  }
+}
+
+function aplicarTema(tema) {
+  const root = document.documentElement;
+  const vars = temas[tema];
+  Object.keys(vars).forEach(key => {
+    root.style.setProperty(key, vars[key]);
+  });
+  temaAtual = tema;
+}
