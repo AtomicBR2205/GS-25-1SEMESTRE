@@ -8,7 +8,6 @@
     <title>HydroSafe Tech</title>
 </head>
 <body>
-    <div id="secaoMenu"></div>
     <div id="menu">
         <div>
             <img src="images/logo.png" alt="Logo HydroSafe Tech" id="logo">
@@ -24,7 +23,7 @@
             <a href="#secao6"><li>Solução</li></a>
             <a href="#quiz"><li>Quiz</li></a>
             <a href="#form"><li>Formulário</li></a>
-            <li id="sair" style="color: white;">X</li>
+            <li id="sair" style="color: white; cursor: pointer;" onclick="abrirMenu()">X</li>
         </ul>
     </div>
     <header>
@@ -44,7 +43,7 @@
             <a href="#secao6"><li>Solução</li></a>
             <a href="#quiz"><li>Quiz</li></a>
             <a href="#form"><li>Formulário</li></a>
-            <li>
+            <li onclick="abrirMenu()">
                 <div id="menubotao"></div>
             </li>
         </ul>
