@@ -1,17 +1,5 @@
 # 🌦️ Estação Meteorológica com Arduino
 
-Este projeto simula uma estação meteorológica utilizando sensores para monitorar condições ambientais como temperatura, umidade, luminosidade e nível de água. Os dados são exibidos em um display LCD I2C.
-
-## 🛠️ Componentes Utilizados
-
-- **Arduino Uno**
-- **Sensor de Temperatura e Umidade DHT22**
-- **Sensor de Luminosidade (LDR)**
-- **Sensor Ultrassônico HC-SR04**
-- **Display LCD 16x2 com interface I2C**
-
-## ⚙️ Funcionamento
-
 Este projeto simula uma estação meteorológica usando um Arduino Uno e sensores que monitoram as condições climáticas e ambientais em tempo real. Ele lê dados de temperatura, umidade, luminosidade e nível de água, processa essas informações e as exibe em um display LCD 16x2 via I2C.
 
 Ao ser ligado, o sistema inicializa o display LCD e informa que está testando os sensores. Isso é feito apenas como uma introdução visual para o usuário saber que o sistema está iniciando corretamente.
@@ -60,6 +48,12 @@ Essas duas telas se alternam automaticamente a cada 2 segundos, permitindo que o
 Este projeto pode ser visualizado e testado diretamente no simulador Wokwi, acessando o link abaixo:
 
 👉 [Acessar simulação no Wokwi](https://wokwi.com/projects/432658398993718273)
+
+## 📽️ Apresentação
+
+Confira a apresentação em vídeo do projeto no YouTube:
+
+👉 [Assista ao vídeo no YouTube](https://youtu.be/aw496WBEeKI)
 
 ---
 
