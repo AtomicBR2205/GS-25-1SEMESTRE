@@ -1,7 +1,7 @@
 # Projeto Interdisciplinar FIAP — Solução Contra Enchentes 🌧️💡
 
 ## 💼 Nome da Empresa
-**[Nome fictício da empresa]** — Uma startup voltada ao desenvolvimento de soluções tecnológicas para monitoramento e prevenção de enchentes no Brasil.
+**HydroSafe Tech** — Uma startup voltada ao desenvolvimento de soluções tecnológicas para monitoramento e prevenção de enchentes no Brasil.
 
 ## 🧩 Desafio Integrador
 O projeto foi desenvolvido em resposta ao desafio interdisciplinar proposto pela FIAP, com o objetivo de mitigar os efeitos das **enchentes e eventos climáticos extremos** através de soluções inovadoras que integram tecnologia, usabilidade e impacto social.
@@ -113,14 +113,4 @@ Produzimos um vídeo com storytelling apresentando:
 | Eduardo Francisco Mauro Gonçalves | RM561969 |
 | Gabriel Luchetta dos Santos | RM561861 |
 | Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
-
----
-
-## 📎 Contato e Informações
-Para mais detalhes técnicos e demonstrações, confira:
-- [Link para vídeo pitch](https://youtube.com/...)
-- [Link para simulação IoT no Wokwi](https://wokwi.com/...)
-- [Repositório GitHub](https://github.com/...)
-
----
 
