@@ -1,3 +1,13 @@
+## 👥 Equipe
+
+| Nome            | RM       |
+|-----------------|----------|
+| Eduardo Francisco Mauro Gonçalves | RM561969 |
+| Gabriel Luchetta dos Santos | RM561861 |
+| Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
+
+---
+
 # 🌦️ Estação Meteorológica com Arduino
 
 Este projeto simula uma estação meteorológica usando um Arduino Uno e sensores que monitoram as condições climáticas e ambientais em tempo real. Ele lê dados de temperatura, umidade, luminosidade e nível de água, processa essas informações e as exibe em um display LCD 16x2 via I2C.
