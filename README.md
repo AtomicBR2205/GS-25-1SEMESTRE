@@ -47,7 +47,7 @@ Essas duas telas se alternam automaticamente a cada 2 segundos, permitindo que o
 
 Este projeto pode ser visualizado e testado diretamente no simulador Wokwi, acessando o link abaixo:
 
-👉 [Acessar simulação no Wokwi](https://wokwi.com/projects/432658398993718273)
+👉 [Acessar simulação no Wokwi](https://wokwi.com/projects/432971162091667457)
 
 ## 📽️ Apresentação
 
