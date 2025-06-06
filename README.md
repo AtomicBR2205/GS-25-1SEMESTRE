@@ -118,9 +118,5 @@ Produzimos um vídeo com storytelling apresentando:
 
 ## 📎 Contato e Informações
 Para mais detalhes técnicos e demonstrações, confira:
-- [Link para vídeo pitch](https://youtube.com/...)
-- [Link para simulação IoT no Wokwi](https://wokwi.com/...)
-- [Repositório GitHub](https://github.com/...)
-
----
+- [Link para vídeo pitch](https://youtu.be/kO7lC_VLBaI)
 
